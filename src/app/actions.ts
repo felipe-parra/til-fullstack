@@ -1,16 +1,16 @@
 "use server";
 
+import { TILType } from "@/components/LearnForm";
 import dbConnect from "@/lib/mongo";
 import { LearnModel } from "@/models";
 import { Learn } from "@/models/learn";
 import { revalidatePath } from "next/cache";
 
-export const createLearn = async (data: FormData) => {
+export const createLearn = async (data: TILType) => {
   try {
     await dbConnect();
     const newLearn: Learn = {
-      title: data.get("title") as string,
-      description: data.get("description") as string,
+      ...data,
       tags: [],
       createdAt: new Date(),
     };
