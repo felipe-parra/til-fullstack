@@ -2,7 +2,7 @@ import dbConnect from "@/lib/mongo";
 import { LearnModel } from "@/models/index";
 import { NextResponse } from "next/server";
 
-export async function GET() {
+export async function POST(req: Request) {
   try {
     await dbConnect();
 
