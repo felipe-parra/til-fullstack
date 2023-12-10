@@ -11,6 +11,8 @@ import { Input } from "./ui/input";
 import { MdOutlineElectricBolt } from "react-icons/md";
 import { MdCreate } from "react-icons/md";
 import { Button } from "./ui/button";
+import { Learn } from "@/models/learn";
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 
 const tilSchema = z.object({
   title: z.string().min(3, {
@@ -61,13 +63,22 @@ export default function TodayILearnedForm() {
     resolver: zodResolver(tilSchema),
     defaultValues: INITIAL_TIL_STATE
   })
+  const { user } = useKindeBrowserClient()
   const formRef = useRef<HTMLFormElement>(null)
   const firstInput = useRef<HTMLInputElement>(null)
 
   async function onSubmit(values: z.infer<typeof tilSchema>) {
     console.log({ values })
 
-    await createLearn(values)
+    if (!user || user?.id === undefined) return
+
+    const newLearn: Learn = {
+      ...values,
+      author: user.id,
+      tags: []
+    }
+
+    await createLearn(newLearn)
     formRef.current?.reset()
     form.reset()
   }
