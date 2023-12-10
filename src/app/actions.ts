@@ -9,12 +9,8 @@ import { revalidatePath } from "next/cache";
 export const createLearn = async (data: TILType) => {
   try {
     await dbConnect();
-    const newLearn: Learn = {
-      ...data,
-      tags: [],
-      createdAt: new Date(),
-    };
-    const result = await LearnModel.create(newLearn);
+
+    const result = await LearnModel.create(data);
 
     console.log({ result });
     revalidatePath("/");
