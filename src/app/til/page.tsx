@@ -1,7 +1,6 @@
 import TILComponent from '@/components/TILComponent'
 
-export default async function TodayILearnedPage() {
-
+export default function TILPage() {
   return (
     <TILComponent />
   )
