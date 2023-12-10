@@ -13,6 +13,10 @@ export function SubmitButton({ text = "Save" }: { text: string }) {
       type="submit"
 
     >
+      {
+        pending &&
+        <div className="animate-spin h-5 w-5 mr-3 border-2 border-t-primary dark:border-t-secondary/50 rounded-full" />
+      }
       {text}
     </Button>
   )
