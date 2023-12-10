@@ -16,7 +16,7 @@ const roboto = Roboto({
 
 export const metadata = {
   title: "Today I Learn",
-  description: "Keep learning through the days",
+  description: "Share what you learn every day",
 };
 
 export default async function RootLayout({
@@ -38,6 +38,8 @@ export default async function RootLayout({
         >
           {/* TODO Header */}
           <header>
+            <link rel="icon" href="/favicon.ico" sizes="any" />
+
             <nav className="flex items-center justify-between w-full p-3">
               {/* TODO Navbar */}
               <Link href={"/"}>
