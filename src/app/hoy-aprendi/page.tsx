@@ -13,9 +13,9 @@ export default async function TodayILearnedPage() {
   }
 
   return (
-    <div>
+    <section className='w-full min-h-screen p-4 flex flex-col justify-start items-center'>
       <LearnForm />
       <LearnList />
-    </div>
+    </section>
   )
 }
