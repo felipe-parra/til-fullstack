@@ -1,7 +1,7 @@
 import { modelOptions, prop } from "@typegoose/typegoose";
 
 @modelOptions({
-  schemaOptions: { collection: "learns" },
+  schemaOptions: { collection: "learns", timestamps: true },
   options: { customName: "Learn" },
 })
 export class Learn {
@@ -19,6 +19,8 @@ export class Learn {
   @prop({ default: [] })
   public tags: string[];
 
-  @prop()
-  public createdAt: Date;
+  @prop({
+    required: true,
+  })
+  public author: string;
 }
