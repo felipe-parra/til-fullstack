@@ -11,9 +11,11 @@ const getAllLearns = async (userId?: string) => {
     throw new Error("Check your credentials")
   }
   await dbConnect()
+
   const result = await LearnModel.find({ author: userId }).sort({ createdAt: "descending" })
+
   const learns = JSON.parse(JSON.stringify(result))
-  console.log({ learns, userId })
+
   return learns
 }
 
