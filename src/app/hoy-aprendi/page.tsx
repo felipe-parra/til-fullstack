@@ -13,9 +13,9 @@ export default async function TodayILearnedPage() {
   }
 
   return (
-    <>
+    <div>
       <LearnForm />
       <LearnList />
-    </>
+    </div>
   )
 }

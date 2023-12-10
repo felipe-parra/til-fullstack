@@ -5,12 +5,22 @@ import {
   LogoutLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import Link from "next/link";
 import Image from 'next/image'
+import { Roboto } from 'next/font/google'
+import { cn } from "@/lib/utils";
+import FilterList from "@/components/FilterList";
+
+
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sans'
+})
 
 export const metadata = {
-  title: "Kinde Auth",
-  description: "Kinde with NextJS App Router",
+  title: "Today I Learn",
+  description: "Keep learning through the days",
 };
 
 export default async function RootLayout({
@@ -21,13 +31,16 @@ export default async function RootLayout({
   const { isAuthenticated, getUser } = getKindeServerSession();
   const user = await getUser();
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={roboto.className}>
+      <body className={cn(
+        "min-h-screen bg-background font-sans antialiased",
+        roboto.variable
+      )}>
         {/* TODO Header */}
         <header>
-          <nav className="nav container">
+          <nav className="flex items-center justify-between w-full p-3">
             {/* TODO Navbar */}
-            <h1 className="text-display-3">KindeAuth</h1>
+            <h1 className="text-4xl font-bold">Today I Learn</h1>
             <div>
               {!(await isAuthenticated()) ? (
                 <>
@@ -40,7 +53,7 @@ export default async function RootLayout({
                 <div className="profile-blob">
                   {user?.picture ? (
                     <Image
-                      className="avatar"
+                      className="rounded-full"
                       src={user?.picture}
                       alt="user profile avatar"
                       referrerPolicy="no-referrer"
@@ -65,7 +78,11 @@ export default async function RootLayout({
             </div>
           </nav>
         </header>
-        <main>{children}</main>
+
+        <main>
+          <FilterList />
+          {children}
+        </main>
         <footer className="footer">
           {/* TODO Footer */}
         </footer>

@@ -1,3 +1,7 @@
+const removeImports = require("next-remove-imports")();
+
+module.exports = removeImports({});
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -9,6 +13,8 @@ const nextConfig = {
       },
     ],
   },
+  // pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+  experimental: { esmExternals: true },
 };
 
 module.exports = nextConfig;
