@@ -2,7 +2,7 @@ import { modelOptions, prop } from "@typegoose/typegoose";
 
 @modelOptions({
   schemaOptions: { collection: "learns", timestamps: true },
-  options: { customName: "Learn" },
+  options: { customName: "Learn", allowMixed: 0 },
 })
 export class Learn {
   @prop({
