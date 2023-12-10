@@ -14,8 +14,11 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import UserCard from "./UserCard"
+import { LogoutLink, useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs"
+import { ToggleTheme } from "./ToggleTheme"
 
 export function Sidebar() {
+  const { user } = useKindeBrowserClient()
   return (
     <div className="grid grid-cols-2 gap-2">
       <Sheet >
@@ -26,28 +29,20 @@ export function Sidebar() {
         </SheetTrigger>
         <SheetContent side={"left"}>
           <SheetHeader>
-            <SheetTitle>Edit profile</SheetTitle>
+            <SheetTitle>Hola {user?.given_name}</SheetTitle>
             <SheetDescription>
-              {"Make changes to your profile here. Click save when you're done."}
+              {/* TODO Mensajes dinamicos */}
+              {"Sigue asi, estas haciendolo genial"}
             </SheetDescription>
           </SheetHeader>
-          <div className="grid gap-4 py-4">
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="name" className="text-right">
-                Name
-              </Label>
-              <Input id="name" value="Pedro Duarte" className="col-span-3" />
-            </div>
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="username" className="text-right">
-                Username
-              </Label>
-              <Input id="username" value="@peduarte" className="col-span-3" />
-            </div>
+          <div className="grid gap-4 py-4 my-5">
+            <Button asChild variant={"destructive"}>
+              <LogoutLink className="text-base ">Salir</LogoutLink>
+            </Button>
           </div>
           <SheetFooter>
             <SheetClose asChild>
-              <Button type="submit">Save changes</Button>
+              <Button type="submit">Cerrar</Button>
             </SheetClose>
           </SheetFooter>
         </SheetContent>
