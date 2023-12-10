@@ -16,7 +16,7 @@ import { Label } from "@/components/ui/label"
 import { Learn } from "@/models/learn"
 import { Textarea } from "./ui/textarea"
 
-export function LearnItemComponent({ title, description, tags, createdAt }: Learn) {
+export function LearnItemComponent({ title, description, tags }: Learn) {
   return (
     <Dialog>
       <DialogTrigger asChild>
