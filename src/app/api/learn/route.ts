@@ -6,7 +6,7 @@ export async function GET() {
   try {
     await dbConnect();
 
-    const learns = await LearnModel.find({});
+    const learns = await LearnModel.find({}).sort({ createdAt: "desc" });
     console.log({ learns });
 
     return NextResponse.json({
