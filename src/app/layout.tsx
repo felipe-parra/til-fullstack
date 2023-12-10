@@ -43,8 +43,10 @@ export default async function RootLayout({
               <Link href={"/"}>
                 <h1 className="text-4xl font-bold">Today I Learn</h1>
               </Link>
-              <Sidebar />
-              <ToggleTheme />
+              <article className="flex items-center justify-end w-1/3">
+                <Sidebar />
+                <ToggleTheme />
+              </article>
             </nav>
           </header>
 

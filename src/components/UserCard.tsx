@@ -1,14 +1,12 @@
 'use client'
 
-import { LoginLink, LogoutLink, RegisterLink, useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs"
-import { usePathname } from "next/navigation"
+import { LoginLink, LogoutLink, useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs"
 import Image from 'next/image'
 
 export default function UserCard() {
-  const pathname = usePathname()
   const { user, isAuthenticated } = useKindeBrowserClient()
   return (
-    <div>
+    <div className="w-full">
       {!isAuthenticated ? (
         <>
           <LoginLink className="btn btn-ghost sign-in-btn">
@@ -16,7 +14,7 @@ export default function UserCard() {
           </LoginLink>
         </>
       ) : (
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between w-full ">
           {user?.picture ? (
             <Image
               className="rounded-full h-10 w-10 m-2"

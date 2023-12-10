@@ -20,10 +20,10 @@ import { ToggleTheme } from "./ToggleTheme"
 export function Sidebar() {
   const { user } = useKindeBrowserClient()
   return (
-    <div className="grid grid-cols-2 gap-2">
-      <Sheet >
-        <SheetTrigger asChild>
-          <button className="w-full text-end">
+    <div className="grid grid-cols-1 gap-4 transition-all duration-300">
+      <Sheet>
+        <SheetTrigger className=" w-full" asChild>
+          <button className="w-full text-end ">
             <UserCard />
           </button>
         </SheetTrigger>
