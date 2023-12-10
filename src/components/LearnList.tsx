@@ -1,9 +1,10 @@
 import { Learn } from '@/models/learn'
 import React, { Suspense } from 'react'
 import { ScrollArea, ScrollBar } from './ui/scroll-area'
+import { config } from '@/config'
 
 const getAllLearns = async () => {
-  const res = await fetch('http://localhost:3000/api/learn')
+  const res = await fetch(config.kindeSiteUrl + '/api/learn')
 
   if (!res.ok) {
     throw new Error("Error getting learns")
