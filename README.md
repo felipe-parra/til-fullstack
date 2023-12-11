@@ -20,6 +20,7 @@ Experience the pleasure of learning every day with Today I Learned, a project th
 - Shadcn
 - react-icons
 
+  <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="30" alt="typescript logo"  />
@@ -32,10 +33,17 @@ Experience the pleasure of learning every day with Today I Learned, a project th
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=nextjs" height="30" alt="nextjs logo"  />
   <img width="12" />
+  <img height="32" width="32" src="https://cdn.simpleicons.org/zod/[COLOR]/" alt="zod logo"/>
+  <img width="12" />
+  <img height="32" width="32" src="https://cdn.simpleicons.org/tailwindcss/[COLOR]/" alt="tailwindcss logo" />
+  <img width="12" />
+  <img height="32" width="32" src="https://cdn.simpleicons.org/shadcnui/[COLOR]/" alt="shadcn logo" />
+  <img width="12" />
 
 ### Backend
 
 - Node 18
+- NextJS 14 (Server Actions)
 - MongoDB
 - Typegoose
 - Kinde Auth
