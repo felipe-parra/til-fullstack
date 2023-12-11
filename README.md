@@ -1,6 +1,6 @@
 # Today I Learned
 
-Share what you learn every day, a project where we believe in learning something new every day. Write and share your daily learnings with the world.
+Experience the pleasure of learning every day with Today I Learned, a project that encourages the constant acquisition of knowledge. Spend a few minutes a day recording and sharing your learning with the world or simply keep it to yourself. Discover the joy of continuing education and join our community committed to personal growth and knowledge expansion. Make daily learning a habit and share inspiration with others on this exciting journey of discovery! 🌟
 
 ## Demo
 
@@ -27,7 +27,21 @@ Share what you learn every day, a project where we believe in learning something
   <img width="12" />
 </div>
 
-## Developer by Felipe Parra
+### List
+
+- TypeScript
+- Node 18
+- React 18
+- NextJS 14
+- MongoDB
+- Typegoose
+- TailwindCSS
+- Shadcn
+- react-icons
+- Zod
+- Kinde Auth
+
+## Developed with ❤️ by Felipe Parra
 
 <div align="left">
   <a href="https://www.linkedin.com/in/felipe-parra-ramirez/" target="_blank">
