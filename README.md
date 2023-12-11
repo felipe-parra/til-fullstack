@@ -2,6 +2,10 @@
 
 Share what you learn every day, a project where we believe in learning something new every day. Write and share your daily learnings with the world.
 
+## Demo
+
+[Try it out here](https://today-i-learn-one.vercel.app/)
+
 ## Stack of Technologies
 
 <div align="left">
