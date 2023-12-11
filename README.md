@@ -1,45 +1,82 @@
-# Kinde Starter Kit - NextJS with full App Router support
+# Today I Learned
 
-## Register an account on Kinde
+Share what you learn every day, a project where we believe in learning something new every day. Write and share your daily learnings with the world.
 
-To get started set up an account on [Kinde](https://app.kinde.com/register). This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Stack of Technologies
 
-## Setup your local environment
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="30" alt="nodejs logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="30" alt="typescript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="html5 logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="css3 logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" alt="react logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=nextjs" height="30" alt="nextjs logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=mongodb" height="30" alt="mongodb logo"  />
+  <img width="12" />
+</div>
 
-Clone this repo and install dependencies by running `npm i`
+## Developer by Felipe Parra
 
-Make a copy of `.env.local.sample` and name it simply `.env.local`. Set the following values from the Kinde `Settings -> Applications -> Backend app` page.
+<div align="left">
+  <a href="https://www.linkedin.com/in/felipe-parra-ramirez/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
+  </a>
+  <a href="mailto:felipeparra.dev@gmail.com" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  />
+  </a>
+  <a href="https://twitter.com/_felipeparra" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="twitter logo"  />
+  </a>
+  <a href="https://www.youtube.com/@FelipeParraMX" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="youtube logo"  />
+  </a>
+  <a href="https://t.me/felipeparradev" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Telegram&logo=telegram&label=&color=2CA5E0&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="telegram logo"  />
+  </a>
+</div>
 
-- `KINDE_CLIENT_ID` with the `Client ID` value
-- `KINDE_CLIENT_SECRET` with the `Client Secret` value
-- `KINDE_ISSUER_URL` with the `Domain` value
+## Run project locally
 
-e.g
+1. Clone this repo
 
+```sh
+git clone git@github.com:felipe-parra/til-fullstack.git
 ```
+
+2. Install dependencies by running `npm i`
+
+```sh
+npm install
+```
+
+3. Make a copy of `.env.local.sample` and name it simply `.env.local`.
+
+```sh
 KINDE_CLIENT_ID=<your_kinde_client_id>
 KINDE_CLIENT_SECRET=<your_kinde_client_secret>
 KINDE_ISSUER_URL=https://<your_kinde_subdomain>.kinde.com
+KINDE_SITE_URL=http://localhost:3000
+KINDE_POST_LOGOUT_REDIRECT_URL=http://localhost:3000
+KINDE_POST_LOGIN_REDIRECT_URL=http://localhost:3000/dashboard
+MONGO_DB_URL="mongodb://localhost:27017/til"
 ```
 
-## Set your Callback and Logout URLs
+4. Start dev server
 
-Your user will be redirected to Kinde to authenticate. After they have logged in or registered they will be redirected back to your React application.
+```sh
+npm run dev
+```
 
-You need to specify in Kinde which url you would like your user to be redirected to in order to authenticate your app.
+5. Now, if everything goes well you can go to
 
-On the `Settings -> Applications -> Backend app` page set `Allowed callback URLs` to `http://localhost:3000/api/auth/kinde_callback`
-
-> Important! This is required for your users to successfully log in to your app.
-
-You will also need to set the url they will be redirected to upon logout. Set the ` Allowed logout redirect URLs` to http://localhost:3000.
-
-## Start your app
-
-Run `npm run dev` in a terminal and navigate to `http://localhost:3000`.
-
-Click on `Sign up` and register your first user for your business!
-
-## View users in Kinde
-
-If you navigate to the "Users" page within Kinde you will see your newly registered user there. 🚀
+```sh
+http://localhost:3000
+```
