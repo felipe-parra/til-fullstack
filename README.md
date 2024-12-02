@@ -33,11 +33,11 @@ Experience the pleasure of learning every day with Today I Learned, a project th
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=nextjs" height="30" alt="nextjs logo"  />
   <img width="12" />
-  <img height="32" width="32" src="https://cdn.simpleicons.org/zod/[COLOR]/" alt="zod logo"/>
+  <img height="32" width="32" src="https://cdn.simpleicons.org/zod" alt="zod logo"/>
   <img width="12" />
-  <img height="32" width="32" src="https://cdn.simpleicons.org/tailwindcss/[COLOR]/" alt="tailwindcss logo" />
+  <img height="32" width="32" src="https://cdn.simpleicons.org/tailwindcss" alt="tailwindcss logo" />
   <img width="12" />
-  <img height="32" width="32" src="https://cdn.simpleicons.org/shadcnui/[COLOR]/" alt="shadcn logo" />
+  <img height="32" width="32" src="https://cdn.simpleicons.org/shadcnui" alt="shadcn logo" />
   <img width="12" />
 
 ### Backend
